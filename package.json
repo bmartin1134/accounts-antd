@@ -1,0 +1,8 @@
+{
+  "name": "accounts-antd",
+  "version": "1.0.0",
+  "description": "useraccounts react antd integration",
+  "main": "index.js",
+  "author": "Brad Martin",
+  "license": "ISC"
+}
