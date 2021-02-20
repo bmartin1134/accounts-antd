@@ -25,7 +25,7 @@ const Submit = ({ text, onClick, disabled, icon, className, social }) => {
       disabled={disabled}
       icon={icon || null}
       className={className}
-    >content={text}</Button>
+    >{text}</Button>
   )
 }
 

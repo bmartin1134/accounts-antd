@@ -1,7 +1,14 @@
 import React from 'react'
-import { Form, Icon, Input, Label } from 'antd'
+import { Form, Input, Label } from 'antd';
+import Icon from '@ant-design/icons';
+import {UserOutlined} from "@ant-design/icons";
+import {MailOutlined} from "@ant-design/icons";
+import {LockOutlined} from "@ant-design/icons";
+import {UnlockOutlined} from "@ant-design/icons";
+import {SafetyOutlined} from "@ant-design/icons";
+import {InfoCircleOutlined} from "@ant-design/icons";
 
-const InputField = (fieldObj) => {
+const InputField = (props) => {
   const {
     _id,
     displayName,
@@ -13,31 +20,39 @@ const InputField = (fieldObj) => {
     focusInput,
     error,
     defaults
-  } = fieldObj
+  } = props
+
+  const requiredFix = required !== false;
+  const errorString = error ? error.errStr : null;
 
   return (
-    <Form.item required={required !== false} error={!!error} label={defaults.showLabels && <label>{displayName}</label>}>
-      <Input
-        autoFocus={focusInput}
-        prefix={<Icon type={{icon || iconMapper[_id] || null}} style={{ color: 'rgba(0,0,0,.25)' }} />}
-        placeholder={defaults.showPlaceholders ? placeholder : ''}
-        type={type}
-        validateStatus={Boolean(error)}
-        help={error && <Label basic color='red' pointing>{error.errStr}</Label>}
-        onChange={(e) => onChange(e, _id)}
-        onBlur={(e) => onChange(e, _id)}
-      />
-    </Form.item>
+      <Form.Item
+          label={defaults.showLabels ? displayName : ''}
+          name={displayName}
+          rules={[{ required: {requiredFix}, message: {errorString} }]}
+
+          validateStatus={error}
+      >
+        <Input
+            autoFocus={focusInput}
+            prefix={<Icon component={icon || iconMapper[_id] || null} style={{color: "rgba(0,0,0,.25)"}} />}
+            placeholder={defaults.showPlaceholders ? placeholder : ''}
+            type={type}
+            onChange={(e) => onChange(e, _id)}/>
+      </Form.Item>
+
+
+
   )
 }
 
 const iconMapper = {
-  username: 'user',
-  email: 'mail',
-  password: 'lock',
-  confirmPassword: 'unlock',
-  currentPassword: 'safety',
-  fullName: 'info-circle'
+  username: UserOutlined,
+  email: MailOutlined,
+  password: LockOutlined,
+  confirmPassword: UnlockOutlined,
+  currentPassword: SafetyOutlined,
+  fullName: InfoCircleOutlined
 }
 
 export default InputField

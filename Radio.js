@@ -30,7 +30,7 @@ class RadioField extends React.Component {
     } = this.props
 
     return (
-      <Form.item required={required !== false} error={error ? true : false} label={defaults.showLabels && <label>{displayName}</label>}>
+      <Form.Item required={required !== false} error={error ? true : false} label={defaults.showLabels && <label>{displayName}</label>}>
 
 
 
@@ -48,7 +48,7 @@ class RadioField extends React.Component {
 
         </Radio.Group>
 
-      </Form.Field>
+      </Form.Item>
     )
   }
 

@@ -1,7 +1,7 @@
 Package.describe({
   summary: 'Ant Design Components for Useraccounts-React',
-  version: '1.0.1',
-  name: 'meteoreact:accounts-antd',
+  version: '1.0.18',
+  name: 'bmartin1134:accounts-antd',
   git: 'https://github.com/bmartin1134/accounts-antd.git',
   documentation: null
 })
