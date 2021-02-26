@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Icon } from 'antd'
+import  Button  from 'antd/lib/button'
+import  Icon  from 'antd/lib/icon'
 
 const Submit = ({ text, onClick, disabled, icon, className, social }) => {
 

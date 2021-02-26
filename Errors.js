@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { message } from 'antd';
+import  message  from 'antd/lib/message';
 
 const Errors = ({ errors }) => {
   return (

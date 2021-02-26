@@ -1,12 +1,13 @@
 import React from 'react'
-import { Form, Input, Label } from 'antd';
-import Icon from '@ant-design/icons';
-import {UserOutlined} from "@ant-design/icons";
-import {MailOutlined} from "@ant-design/icons";
-import {LockOutlined} from "@ant-design/icons";
-import {UnlockOutlined} from "@ant-design/icons";
-import {SafetyOutlined} from "@ant-design/icons";
-import {InfoCircleOutlined} from "@ant-design/icons";
+import Form from 'antd/lib/form';
+import Input from 'antd/lib/input';
+import Icon from '@ant-design/icons/lib/components/AntdIcon';
+import UserOutlined from "@ant-design/icons/UserOutlined";
+import MailOutlined from "@ant-design/icons/MailOutlined";
+import LockOutlined from "@ant-design/icons/LockOutlined";
+import UnlockOutlined from "@ant-design/icons/UnlockOutlined";
+import SafetyOutlined from "@ant-design/icons/SafetyOutlined";
+import InfoCircleOutlined from "@ant-design/icons/InfoCircleOutlined";
 
 const InputField = (props) => {
   const {

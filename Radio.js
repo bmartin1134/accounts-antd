@@ -1,5 +1,6 @@
 import React from 'react'
-import { Form, Radio } from 'antd'
+import Form from 'antd/lib/form'
+import Radio from 'antd/lib/radio'
 
 class RadioField extends React.Component {
 
