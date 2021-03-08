@@ -1,15 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import  message  from 'antd/lib/message';
+import message  from 'antd/lib/message';
 
 const Errors = ({ errors }) => {
-  return (
-    <script type="text/javascript">
-      {errors.map((err, i) => (message.error(err.errStr)))}
+  if(errors) {
+    return (
+        <React.Fragment>
+          {errors.map((err, i) => (message.error(err.errStr)))}
 
-    </script>
+        </React.Fragment>
 
-  )
+    )
+  } else {
+    return (
+        <React.Fragment>
+        </React.Fragment>
+
+    )
+  }
 }
 
 Errors.propTypes = {

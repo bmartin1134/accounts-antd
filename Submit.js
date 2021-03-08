@@ -13,7 +13,7 @@ const Submit = ({ text, onClick, disabled, icon, className, social }) => {
 
     return (
       <Button color={color || null} onClick={onClick} className='social-btn'>
-        <Icon name={social} /> Continue with {capitalize(social)}
+        Continue with {capitalize(social)}
       </Button>
     )
   }
